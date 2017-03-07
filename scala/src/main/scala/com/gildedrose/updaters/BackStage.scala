@@ -4,17 +4,17 @@ import com.gildedrose.Item
 
 class BackStage extends Updater{
   override def update(item: Item): Unit = {
-    item.sellIn = item.sellIn - 1
+    decreaseSellIn(item)
     if (qualityLessThanMax(item)) {
-      item.quality = item.quality + 1
+      increaseQuality(item)
       if (item.sellIn < 11) {
         if (qualityLessThanMax(item)) {
-          item.quality = item.quality + 1
+          increaseQuality(item)
         }
       }
       if (item.sellIn < 6) {
         if (qualityLessThanMax(item)) {
-          item.quality = item.quality + 1
+          increaseQuality(item)
         }
       }
       if (sellInDatePassed(item)) {
@@ -22,4 +22,6 @@ class BackStage extends Updater{
       }
     }
   }
+
+
 }

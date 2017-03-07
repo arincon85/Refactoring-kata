@@ -5,16 +5,12 @@ import com.gildedrose.Item
 /**
   * Created by arincon on 7/03/17.
   */
-class Default extends Updater{
+class Default extends Updater {
   override def update(item: Item): Unit = {
-    if (item.quality > 0) {
-      item.quality = item.quality - 1
-    }
-    item.sellIn = item.sellIn - 1
+    decreaseQuality(item)
+    decreaseSellIn(item)
     if (sellInDatePassed(item)) {
-      if (item.quality > 0) {
-        item.quality = item.quality - 1
-      }
+      decreaseQuality(item)
     }
   }
 
