@@ -1,4 +1,6 @@
-package com.gildedrose
+package com.gildedrose.updaters
+
+import com.gildedrose.Item
 
 trait Updater {
   def update(item: Item)

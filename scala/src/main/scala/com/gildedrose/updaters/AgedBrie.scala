@@ -1,4 +1,6 @@
-package com.gildedrose
+package com.gildedrose.updaters
+
+import com.gildedrose.Item
 
 /**
   * Created by arincon on 7/03/17.

@@ -1,4 +1,6 @@
-package com.gildedrose
+package com.gildedrose.updaters
+
+import com.gildedrose.Item
 
 class BackStage extends Updater{
   override def update(item: Item): Unit = {
