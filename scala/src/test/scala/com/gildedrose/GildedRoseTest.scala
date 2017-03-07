@@ -33,6 +33,9 @@ class GildedRoseTest extends FlatSpec with Matchers {
   it should "Backstage pass sellin <= -1 quality 0" in {
     testCaseForItem(new Item("Backstage passes to a TAFKAL80ETC concert", -1, 2), -2, 0)
   }
+  it should "conjurados decrease quality by 2" in {
+    testCaseForItem(new Item("conjurados", 2, 4), 1, 2)
+  }
 
   private def testCaseForItem(item: Item, sellIn: Int, quality: Int) = {
     val app = new GildedRose(Array[Item](item))

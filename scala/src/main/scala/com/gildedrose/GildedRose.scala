@@ -1,12 +1,13 @@
 package com.gildedrose
 
-import com.gildedrose.updaters.{AgedBrie, BackStage, Default, Sulfuras}
+import com.gildedrose.updaters._
 
 class GildedRose(val items: Seq[Item]) {
   val rules = Map(
     "Aged Brie" -> new AgedBrie,
     "Backstage passes to a TAFKAL80ETC concert" -> new BackStage,
-    "Sulfuras, Hand of Ragnaros" -> new Sulfuras
+    "Sulfuras, Hand of Ragnaros" -> new Sulfuras,
+    "conjurados" -> new Conjurados
   )
 
   def updateQuality() {
